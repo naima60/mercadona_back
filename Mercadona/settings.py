@@ -35,10 +35,8 @@ SECRET_KEY = 'django-insecure-afu(dzakc0mdr-o-fe_$@5kh!n8qr$a^5+0pf(7ky9r=1esz1h
 #DEBUG = False
 DEBUG = 'RENDER' not in os.environ
 
-#ALLOWED_HOSTS = ['*']
-
 # https://docs.djangoproject.com/en/3.0/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME:
@@ -174,7 +172,7 @@ MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
 
 #paramètre React
-CORS_ALLOWED_All_ORIGINS = True
+CORS_ALLOW_All_ORIGINS = True
 
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',  # Remplacez par l'URL de votre application React
