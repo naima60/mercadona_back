@@ -1,5 +1,4 @@
 # Ignore les fichiers de l'environnement virtuel
-Mercadona/
 
 # Ignore les fichiers de migration
 *.pyc
