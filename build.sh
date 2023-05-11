@@ -1,5 +1,5 @@
 #install dependencies
-pip install -r build.sh
+pip install -r requirements.txt
 # run static files
 python manage.py collectstatic --no-input
 # run migrate
