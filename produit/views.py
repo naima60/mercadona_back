@@ -5,7 +5,7 @@ from django.core.paginator import Paginator
 # Create your views here.
 
 def index(request):
-    list_products = Produit.objects.filter(active='True')
+    list_products = Produit.objects.filter(active='True').order_by('id')
     paginator = Paginator(list_products, 15) # 15 articles par page
     page = request.GET.get('page')
     products = paginator.get_page(page)
