@@ -174,7 +174,7 @@ MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
 
 #paramètre React
-CORS_ALLOWED_All_ORIGINS = True
+CORS_ALLOW_All_ORIGINS = True
 
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',  # Remplacez par l'URL de votre application React
