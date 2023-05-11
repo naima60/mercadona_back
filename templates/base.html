@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produits Mercadona</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">
+
+     {% block head %}
+        <!-- Ici, vous pouvez inclure des balises link ou des balises style pour lier vos fichiers CSS -->
+    {% endblock %}
+
+</head>
+
+
+<body>
+
+<div class="header-logo">
+<img src="{% static 'images/logo_mercadona.png' %}" class="logo">
+
+
+</div>
+
+   <!-- on récupère le name que l'on a saisi dans url.py -->
+<a href="{% url 'index' %}">
+<h1>Mercadona vous souhaite la bienvenue!</h1>
+</a>
+
+<h3>Profitez de nos promotions pendant toute l'année</h3>
+
+{% block content %}
+
+{% endblock %}
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>
