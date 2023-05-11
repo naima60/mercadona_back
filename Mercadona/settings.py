@@ -32,11 +32,15 @@ environ.Env.read_env()
 SECRET_KEY = 'django-insecure-afu(dzakc0mdr-o-fe_$@5kh!n8qr$a^5+0pf(7ky9r=1esz1h'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = False
-DEBUG = 'RENDER' not in os.environ
+DEBUG = False
+#DEBUG = 'RENDER' not in os.environ
 
 # https://docs.djangoproject.com/en/3.0/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = ['*']
+
+ALLOWED_HOSTS = [
+    'https://mercadonaapp.onrender.com/',
+    'https://naima60.github.io/mercadona_fontend/',
+]
 
 '''RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME:
@@ -151,15 +155,18 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 # The filesystem path to the directory that will contain your static files
-STATICFILES_DIRS = [BASE_DIR / 'static']
+STATICFILES_DIRS = [BASE_DIR / 'staticfiles']
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Following settings only make sense on production and may break development environments.
-if not DEBUG:    # Tell Django to copy statics to the `staticfiles` directory
+'''if not DEBUG:    # Tell Django to copy statics to the `staticfiles` directory
     # in your application directory on Render.
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
     # Turn on WhiteNoise storage backend that takes care of compressing static files
     # and creating unique names for each version so they can safely be cached forever.
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+    '''
+
 
 
 # Default primary key field type
