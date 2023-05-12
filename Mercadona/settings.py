@@ -36,17 +36,18 @@ DEBUG = 'RENDER' not in os.environ
 
 # https://docs.djangoproject.com/en/3.0/ref/settings/#allowed-hosts
 
-'''ALLOWED_HOSTS = [
+ALLOWED_HOSTS = [
     'https://mercadonaapp.onrender.com/',
     'https://naima60.github.io/mercadona_fontend/',
     'localhost',
     '127.0.0.1',
-]'''
+]
 
-ALLOWED_HOSTS = ['*',
+'''ALLOWED_HOSTS = ['*',
+'https://naima60.github.io/mercadona_fontend/'
                  '127.0.0.1',
 
-                 ]
+                 ]'''
 
 '''RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME:
@@ -185,6 +186,9 @@ MEDIA_ROOT = BASE_DIR / "media"
 CORS_ALLOW_All_ORIGINS = True
 
 CORS_ORIGIN_WHITELIST = [
+
+    '127.0.0.1',
+'https://naima60.github.io',
     'http://localhost:3000',  # Remplacez par l'URL de votre application React
     'http://localhost:3001',
 ]
